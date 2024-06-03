@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Functions</title>
+</head>
+<body>
+  <script>
+    //Created a function that takes a number and adds 7 to it, entered in the console.log line (14)
+    function add7(yourNumber) {
+      return yourNumber +7;
+    }
+    console.log(add7(1));
+
+    //Created a function that multiplies two numbers, entered in the console.log line (20)
+    function multiply(yourNumber1, yourNumber2) {
+    return yourNumber1 * yourNumber2;
+    }
+    console.log(multiply(5, 3));
+
+    //Created a function that asks a user for text/sentence and returns the first letter capitalized. User can enter any amount of texts and
+    //it can be uppercase, lowercase or both.
+    function capitalize() {
+    let userEnter = prompt("Please enter any text or sentence.");
+    const words = userEnter.split(" ");
+
+    for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    }
+
+    return words.join(" ");
+    }
+    console.log(capitalize());
+
+    //Created a function called lastLetter that takes a string and returns the very last letter of that string. For example, lastLetter("abcd") should return "d"
+    function lastLetter() {
+      let userEnter2 = prompt("Please enter any text for the last letter to be returned.");
+      return userEnter2.slice(-1);
+    }
+    console.log(lastLetter());
+
+  </script>
+</body>
+</html>
